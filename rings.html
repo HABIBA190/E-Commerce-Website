@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+       <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Fascinate+Inline&family=Limelight&display=swap" rel="stylesheet"> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RINGS</title>
+    <script src="script.js"></script>
+</head>
+<body class="bg-white">
+
+    <nav class="navbar navbar-expand-lg" style="background-color: rgb(255, 255, 255);">
+        <div class="container-fluid">
+
+          <img src="images/Beige_Gold_Minimalist_Jewelry_Logo__4_-removebg-preview.png" class="img-fluid" alt="" style="max-width: 100px; max-height: 80px;"> 
+          
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 d-flex justify-content-center">
+              <li class="nav-item mx-3">
+                <a class="nav-link active  fs-5" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item dropdown mx-3">
+                <a class="nav-link dropdown-toggle fs-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 Products
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item fs-5" href="earings.html">Earrings</a></li>
+                  <li><a class="dropdown-item fs-5" href="necklace.html">Necklace Sets</a></li>
+                  <li><a class="dropdown-item fs-5" href="bracelet.html"> Bracelets</a></li>
+                  <li><a class="dropdown-item fs-5" href="rings.html">Rings</a></li>
+                  <li><a class="dropdown-item fs-5" href="dreamy collection.html">Dreamy Collection</a></li>
+                </ul>
+              </li>
+              <li class="nav-item mx-3 fs-5">
+                <a class="nav-link" href="about us.html">About us</a>
+              </li>
+              <li class="nav-item mx-3 fs-5">
+                <a class="nav-link" href="contactus.html">Contact us</a>
+              </li>
+            </ul>
+
+            <div class="d-flex ms-auto ">
+                <div class="icon mx-2">
+               <a href="login.html">  <i class="bi bi-person-fill fs-3 mx-2 text-dark"></i></a> 
+                </div>
+                <div class="cart mx-2" onclick="openCart()">
+                    <i class="bi bi-cart fs-2"></i>
+                    <span id="cart-count" class="badge bg-danger mx-3" style="position: absolute; top: 0; right: 0; transform: translate(-80%, 100%); display: none;margin-top: 29px;">0</span>
+                </div>
+            </div>
+          </div>
+        </div>
+   </nav>
+
+    <div class="container mt-5">
+            <div class="row mb-4 d-flex justify-content-start">
+                <div class="col-6 ">
+                    <label for="sort-options" class="fs-5">Sort By: </label>
+                    <select id="sort-options" class="form-select w-50" onchange="sortBy(this.value)">
+                        <option value="alphabetically">Alphabetically (A-Z)</option>
+                        <option value="price">Price (100 to 5000)</option>
+                    </select>
+                </div>
+            </div>
+       
+        <div class="row" id="product-container">
+            <div class="col-lg-3  product-item" onclick="location.href='rings1.html?name=GOLDEN%20EMBRACE%20RING%20%E2%99%A1&image=images/rings/cluster%20ring.webp&price=1000'">
+                <img src="images/rings/cluster ring.webp" class="img-fluid w-100 h-75" />
+                <h5 class="text-center mt-4">GOLDEN EMBRACE RING</h5>
+                <p class="text-center price">Rs 1000</p>
+            </div>
+            
+            <div class="col-lg-3 product-item" onclick="location.href='rings1.html?name=SILVER%20SERENITY%20RING%20%E2%99%A1&image=images/rings/starnny%20silver%20rong.jpg&price=1500'">
+                <img src="images/rings/starnny silver rong.jpg" class="img-fluid w-100 h-75" />
+                <h5 class="text-center mt-4">SILVER SERENITY RING</h5>
+                <p class="text-center price">Rs 1500</p>
+            </div>            
+            <div class="col-lg-3 product-item" onclick="location.href='rings1.html?name=EMERALD%20ECHO%20RING%20%E2%99%A1&image=images/rings/emerald%20echo%20ring.jpg&price=800'">
+                <img src="images/rings/emerald echo ring.jpg" class="img-fluid w-100 h-75" />
+                <h5 class="text-center mt-4">EMERALD ECHO RING</h5>
+                <p class="text-center price">Rs 800</p>
+            </div>
+            <div class="col-lg-3 product-item" onclick="location.href='rings1.html?name=LOOP%20RING%20%E2%99%A1&image=images/rings/loop%20ring.jpg&price=1000'">
+                <img src="images/rings/loop ring.jpg" class="img-fluid w-100 h-75" />
+                <h5 class="text-center mt-4">LOOP RING</h5>
+                <p class="text-center price">Rs 1000</p>
+            </div>            
+
+            <div class="col-lg-3 product-item" onclick="location.href='rings1.html?name=STAR%20OF%20DAVID%20RING%20%E2%99%A1&image=images/rings/star%20of%20david%20ring.jpg&price=1300'">
+                <img src="images/rings/star of david ring.jpg" class="img-fluid w-100 h-75" />
+                <h5 class="text-center mt-4">STAR OF DAVID RING</h5>
+                <p class="text-center price">Rs 1300</p>
+            </div>
+            <div class="col-lg-3 product-item" onclick="location.href='rings1.html?name=ROSE%20GOLD%20BUTTERFLY%20RING%20%E2%99%A1&image=images/rings/rose%20gold%20butterfly%20ring.jpg&price=500'">
+                <img src="images/rings/rose gold butterfly ring.jpg" class="img-fluid w-100 h-75" />
+                <h5 class="text-center mt-4">ROSE GOLD BUTTERFLY RING</h5>
+                <p class="text-center price">Rs 500</p>
+            </div>
+            <div class="col-lg-3 product-item" onclick="location.href='rings1.html?name=MYSTIC%20GLAMOUR%20RING%20%E2%99%A1&image=images/rings/ring%207.webp&price=2000'">
+                <img src="images/rings/ring 7.webp" class="img-fluid w-100 h-75" />
+                <h5 class="text-center mt-4">MYSTIC GLAMOUR RING</h5>
+                <p class="text-center price">Rs 2000</p>
+            </div>
+            <div class="col-lg-3 product-item" onclick="location.href='rings1.html?name=THIN%20STACK%20RING%20%E2%99%A1&image=images/rings/thin%20stack%20ring.jpg&price=500'">
+                <img src="images/rings/thin stack ring.jpg" class="img-fluid w-100 h-75" />
+                <h5 class="text-center mt-4">THIN STACK RING</h5>
+                <p class="text-center price">Rs 500</p>
+            </div>            
+            <div class="col-lg-3 product-item" onclick="location.href='rings1.html?name=SE%20SOUCIER%20RING%20%E2%99%A1&image=images/rings/se%20soucier%20ring.jpg&price=1000'">
+                <img src="images/rings/se soucier ring.jpg" class="img-fluid w-100 h-75" />
+                <h5 class="text-center mt-4">SE SOUCIER RING</h5>
+                <p class="text-center price">Rs 1000</p>
+            </div>
+            <div class="col-lg-3 product-item" onclick="location.href='rings1.html?name=OPAL%20DREAM%20RING%20%E2%99%A1&image=images/rings/ring3.jpg&price=2500'">
+                <img src="images/rings/ring3.jpg" class="img-fluid w-100 h-75" alt="Opal Dream Ring" />
+                <h5 class="text-center mt-4">OPAL DREAM RING</h5>
+                <p class="text-center price">Rs 2500</p>
+            </div>
+            
+            <div class="col-lg-3 product-item" onclick="location.href='rings1.html?name=TWILIGHT%20SPARKLE%20RING%20%E2%99%A1&image=images/rings/ring%202.jpg&price=1000'">
+                <img src="images/rings/ring 2.jpg" class="img-fluid w-100 h-75" />
+                <h5 class="text-center mt-4">TWILIGHT SPARKLE RING</h5>
+                <p class="text-center price">Rs 1000</p>
+            </div>
+            <div class="col-lg-3 product-item" onclick="location.href='rings1.html?name=VANITY%20RING%20%E2%99%A1&image=images/rings/VANITY%20RING.jpg&price=2000'">
+                <img src="images/rings/VANITY RING.jpg" class="img-fluid w-100 h-75" />
+                <h5 class="text-center mt-4">VANITY RING</h5>
+                <p class="text-center price">Rs 2000</p>
+            </div>
+            <div class="col-lg-3 product-item" onclick="location.href='rings1.html?name=MYSTIC%20GLAMOUR%20RING%20%E2%99%A1&image=images/rings/ring4.webp&price=1000'">
+            <img src="images/rings/ring4.webp" class="img-fluid w-100 h-75" />
+                <h5 class="text-center mt-4">MYSTIC GLAMOUR RING</h5>
+                <p class="text-center price">Rs 1000</p>
+            </div>
+            
+            <div class="col-lg-3 product-item" onclick="location.href='rings1.html?name=PROMISE%20RING%20%E2%99%A1&image=images/rings/ring6.jpeg&price=1000'">
+                <img src="images/rings/ring6.jpeg" class="img-fluid w-100 h-75"  />
+                <h5 class="text-center mt-4" >
+                    PROMISE RING 
+                </h5>
+                <p class="text-center price" >Rs 1000</p>
+            </div>
+            <div class="col-lg-3 product-item" onclick="location.href='rings1.html?name=ENCHANTED%20RING%20%E2%99%A1&image=images/rings/ring%208.webp&price=1500'">
+                <img src="images/rings/ring 8.webp" class="img-fluid w-100 h-75"  />
+                <h5 class="text-center mt-4" >
+                    ENCHANTED RING 
+                </h5>
+                <p class="text-center price" >Rs 1500</p>
+            </div>
+            <div class="col-lg-3 product-item" onclick="location.href='rings1.html?name=AURORA%20LIGHT%20RING%20%E2%99%A1&image=images/rings/ring%209.jpg&price=800'">
+                <img src="images/rings/ring 9.jpg" class="img-fluid w-100 h-75"  />
+                <h5 class="text-center mt-4" >
+                    AURORA LIGHT RING
+                </h5>
+                <p class="text-center price" >Rs 800</p>
+            </div>
+            <div class="col-lg-3 product-item" onclick="location.href='rings1.html?name=CELESTIAL%20RADIANCE%20RING%20%E2%99%A1&image=images/rings/ring%2010.webp&price=1000'">
+            <img src="images/rings/ring 10.webp" class="img-fluid w-100 h-75" />
+                <h5 class="text-center mt-4">CELESTIAL RADIANCE RING</h5>
+                <p class="text-center price">Rs 1000</p>
+            </div>
+            
+            <div class="col-lg-3 product-item" onclick="location.href='rings1.html?name=CROWN%20INSPIRED%20RING%20%E2%99%A1&image=images/rings/ring%2011.jpeg&price=500'">
+                <img src="images/rings/ring 11.jpeg" class="img-fluid w-100 h-75"  />
+                <h5 class="text-center mt-4" >
+                    CROWN INSPIRED RING
+                </h5>
+                <p class="text-center price" >Rs 500</p>
+            </div>
+            <div class="col-lg-3 product-item" onclick="location.href='rings1.html?name=VINTAGE%20ROSE%20GOLD%20RING%20%E2%99%A1&image=images/rings/ring%2012.webp&price=1800'">
+                <img src="images/rings/ring 12.webp" class="img-fluid w-100 h-75"  />
+                <h5 class="text-center mt-4" >
+                    VINTAGE ROSE GOLD RING 
+                </h5>
+                <p class="text-center price" >Rs 1800</p>
+            </div>
+            <div class="col-lg-3 product-item" onclick="location.href='rings1.html?name=ROUND%20CUT%20FIVE%20STONE%20RING%20%E2%99%A1&image=images/rings/ring%2013.jpg&price=1500'">
+                <img src="images/rings/ring 13.jpg" class="img-fluid w-100 h-75"  />
+                <h5 class="text-center mt-4" >
+                  ROUND CUT FIVE STONE RING
+                </h5>
+                <p class="text-center price" >Rs 1500</p>
+            </div>
+            
+            
+        </div>
+    </div>
+    
+    <footer style="background-color: rgb(247, 247, 247);border-top: 1px solid black;">
+        <div class="row ">
+            
+          <div class="col-lg-2 mt-3 text-center">
+            <h4 >Shop</h4>
+            <ul class="shop-list">
+                <li>Shop All</li>
+                <li>Necklaces</li>
+                <li>Bracelets</li>
+                <li>Earrings</li>
+                <li>Rings</li>
+                <li>Studs</li>
+            </ul>
+         </div>
+         <div class="col-lg-3 mt-3 text-center">
+            <h4 >Information</h4>
+           <ul class="shop-list">
+              <li>FAQ</li>
+              <li>Customer Care</li>
+              <li>Terms & Conditions</li>
+           </ul>
+         </div>
+         <div class="col-lg-3 mt-3 text-center ">
+          <h4 >Company</h4>
+         <ul class="shop-list ">
+          <i class="bi bi-telephone-fill  "></i> <li>+92-234-763-0432</li> 
+          <i class="bi bi-envelope-fill"></i><li>jewelgems@gmail.com</li>
+          <i class="bi bi-geo-alt-fill  "> </i> <li> Shop no 1, Plot, 37-C Tariq Rd, Block 2 PECHS, Karachi.</li>
+          <i class="bi bi-clock-fill"></i> <li> 9:00AM - 5:00PM</li>
+         </ul>
+         </div>
+         <div class="col-lg-3 fs-3 mt-3 text-center">
+          <h3 class="mx-3 ">♡♡♡</h3>
+          <p><b style="  font-family: Courgette, cursive;">MODERN <br> JEWELRY</b> <br> For the <br> <b style="  font-family: Courgette, cursive;">VINTAGE </b><br> Soul</p>
+         </div>
+       </div>
+        
+      
+    </footer>
+</body>
+</html>

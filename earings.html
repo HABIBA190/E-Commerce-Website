@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+       <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Fascinate+Inline&family=Limelight&display=swap" rel="stylesheet"> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EARRINGS</title>
+    <script src="main.js"></script>
+</head>
+<body class="bg-white">
+
+    <nav class="navbar navbar-expand-lg" style="background-color: rgb(255, 255, 255);">
+        <div class="container-fluid">
+
+          <img src="images/Beige_Gold_Minimalist_Jewelry_Logo__4_-removebg-preview.png" class="img-fluid" alt="" style="max-width: 100px; max-height: 80px;"> 
+          
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 d-flex justify-content-center">
+              <li class="nav-item mx-3">
+                <a class="nav-link active  fs-5" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item dropdown mx-3">
+                <a class="nav-link dropdown-toggle fs-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 Products
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item fs-5" href="earings.html">Earrings</a></li>
+                  <li><a class="dropdown-item fs-5" href="necklace.html">Necklace Sets</a></li>
+                  <li><a class="dropdown-item fs-5" href="bracelet.html">Bracelets</a></li>
+                  <li><a class="dropdown-item fs-5" href="rings.html">Rings</a></li>
+                  <li><a class="dropdown-item fs-5" href="dreamy collection.html">Dreamy Collection</a></li>
+                </ul>
+              </li>
+              <li class="nav-item mx-3 fs-5">
+                <a class="nav-link" href="about us.html">About us</a>
+              </li>
+              <li class="nav-item mx-3 fs-5">
+                <a class="nav-link" href="contactus.html">Contact us</a>
+              </li>
+            </ul>
+
+            <div class="d-flex ms-auto ">
+                <div class="icon mx-2">
+               <a href="login.html">  <i class="bi bi-person-fill fs-3 mx-2 text-dark"></i></a> 
+                </div>
+                <div class="cart mx-2" onclick="openCart()">
+                    <i class="bi bi-cart fs-2"></i>
+                    <span id="cart-count" class="badge bg-danger mx-3" style="position: absolute; top: 0; right: 0; transform: translate(-80%, 100%); display: none;margin-top: 29px;">0</span>
+                </div>
+            </div>
+          </div>
+        </div>
+   </nav>
+
+    <div class="container mt-5">
+        <div class="row mb-4 d-flex justify-content-start">
+            <div class="col-6 ">
+                <label for="sort-options" class="fs-5">Sort By: </label>
+                <select id="sort-options" class="form-select w-50" onchange="sortBy(this.value)">
+                    <option value="alphabetically">Alphabetically (A-Z)</option>
+                    <option value="price">Price (100 to 5000)</option>
+                </select>
+            </div>
+        </div>
+        <div class="row" id="product-container">
+            <div class="col-lg-3 product-item" onclick="location.href='earrings1.html?name=PEARL%20LEVEL%20BACK%20EARRINGS%20%E2%99%A1&image=images/earings/pearl%20lever%20back%20earing.webp&price=500'">
+                <img src="images/earings/pearl lever back earing.webp" class="img-fluid w-100 h-75" alt="Gemstone Bracelet" />
+                <h5 class="text-center mt-4">PEARL LEVEL BACK EARRINGS</h5>
+                <p class="text-center price">Rs 500</p>
+            </div>
+            <div class="col-lg-3 product-item" onclick="location.href='earrings1.html?name=CRYSTAL%202%20SQUARE%20EARRINGS%20%E2%99%A1&image=images/earings/crystal%202%20square%20earings.webp&price=800'">
+                <img src="images/earings/crystal 2 square earings.webp" class="img-fluid w-100 h-75" alt="Crystal 2 Square Earrings" />
+                <h5 class="text-center mt-4">CRYSTAL 2 SQUARE EARRINGS</h5>
+                <p class="text-center price">Rs 800</p>
+            </div>
+            <div class="col-lg-3 product-item" onclick="location.href='earrings1.html?name=INITIAL%20CHAIN%20BRACELET%20%E2%99%A1&image=images/earings/crystal%20heart%20earings.jpg&price=500'">
+                <img src="images/earings/crystal%20heart%20earings.jpg" class="img-fluid w-100 h-75" alt="Initial Chain Bracelet" />
+                <h5 class="text-center mt-4">INITIAL CHAIN BRACELET</h5>
+                <p class="text-center price">Rs 500</p>
+            </div>
+            <div class="col-lg-3 product-item" onclick="location.href='earrings1.html?name=SINGLE%20STRAND%20DISC%20BRACELET%20%E2%99%A1&image=images/earings/little%20heart%20earings.webp&price=300'">
+                <img src="images/earings/little%20heart%20earings.webp" class="img-fluid w-100 h-75" alt="Single Strand Disc Bracelet" />
+                <h5 class="text-center mt-4">SINGLE STRAND DISC BRACELET</h5>
+                <p class="text-center price">Rs 300</p>
+            </div>
+            <div class="col-lg-3 product-item" onclick="location.href='earrings1.html?name=SKINNY%20TAGLINE%20BRACELET%20%E2%99%A1&image=images/earings/small%20hoop.jpg&price=700'">
+                <img src="images/earings/small%20hoop.jpg" class="img-fluid w-100 h-75" alt="Skinny Tagline Bracelet" />
+                <h5 class="text-center mt-4">SKINNY TAGLINE BRACELET</h5>
+                <p class="text-center price">Rs 700</p>
+            </div>
+            <div class="col-lg-3 product-item" onclick="location.href='earrings1.html?name=BUTTERFLY%20DANGLE%20EARRINGS%20%E2%99%A1&image=images/earings/butterfly%20dangle%20earings.jpg&price=1000'">
+                <img src="images/earings/butterfly dangle earings.jpg" class="img-fluid w-100 h-75" alt="Heart Disc Bracelet" />
+                <h5 class="text-center mt-4">BUTTERFLY DANGLE EARRINGS</h5>
+                <p class="text-center price">Rs 1500</p>
+            </div>
+            <div class="col-lg-3 product-item" onclick="location.href='earrings1.html?name=HOOKED%20ON%20HOPE%20EARRINGS%20%E2%99%A1&image=images/earings/Hooked%20on%20hoops%20earing.jpg&price=1000'">
+                <img src="images/earings/Hooked on hoops earing.jpg" class="img-fluid w-100 h-75" alt="Rectangle Link Bracelet" />
+                <h5 class="text-center mt-4">HOOKED ON HOPE EARRINGS</h5>
+                <p class="text-center price">Rs 1000</p>
+            </div>
+            <div class="col-lg-3 product-item" onclick="location.href='earrings1.html?name=SINGLE%20UNDER%20CIRCLE%20EARRINGS%20%E2%99%A1&image=images/earings/single%20under%20circle%20earings.jpg&price=800'">
+                <img src="images/earings/single under circle earings.jpg" class="img-fluid w-100 h-75" alt="Solo Moveable Bar Bracelet" />
+                <h5 class="text-center mt-4">SINGLE UNDER CIRCLE EARRINGS</h5>
+                <p class="text-center price">Rs 800</p>
+            </div>
+            <div class="col-lg-3 product-item" onclick="location.href='earrings1.html?name=SMALL%20THICK%20FLAT%20BLAKE%20HOOPS%20%E2%99%A1&image=images/earings/small%20thick%20flat%20blake%20hoops.jpg&price=500'">
+                <img src="images/earings/small thick flat blake hoops.jpg" class="img-fluid w-100 h-75" alt="Dove Pearl Bracelet" />
+                <h5 class="text-center mt-4">SMALL THICK FLAT BLAKE HOOPS</h5>
+                <p class="text-center price">Rs 500</p>
+            </div>
+            <div class="col-lg-3 product-item" onclick="location.href='earrings1.html?name=LARGE%20ECLIPSE%20HOOPS%20%E2%99%A1&image=images/earings/large%20eclipse%20hoops.jpg&price=1000'">
+                <img src="images/earings/large eclipse hoops.jpg" class="img-fluid w-100 h-75" alt="Zig Zag Multi Bracelet" />
+                <h5 class="text-center mt-4">LARGE ECLIPSE HOOPS</h5>
+                <p class="text-center price">Rs 1000</p>
+            </div>
+            <div class="col-lg-3 product-item" onclick="location.href='earrings1.html?name=HOOP%20EARRINGS%20%E2%99%A1&image=images/earings/Hoop%20earimgs.webp&price=1000'">
+                <img src="images/earings/Hoop earimgs.webp" class="img-fluid w-100 h-75" alt="Mega Malibu Bracelet" />
+                <h5 class="text-center mt-4">HOOP EARRINGS</h5>
+                <p class="text-center price">Rs 1000</p>
+            </div>
+            <div class="col-lg-3 product-item" onclick="location.href='earrings1.html?name=TRENDY%20DESIGNER%20EARRINGS%20%E2%99%A1&image=images/earings/trendy%20designer%20earings.webp&price=2000'">
+                <img src="images/earings/trendy designer earings.webp" class="img-fluid w-100 h-75" alt="Yilomene Bracelet" />
+                <h5 class="text-center mt-4">TRENDY DESIGNER EARRINGS</h5>
+                <p class="text-center price">Rs 2000</p>
+            </div>
+            <div class="col-lg-3 product-item" onclick="location.href='earrings1.html?name=FLOWER%20DROP%20EARRINGS%20%E2%99%A1&image=images/earings/tear%20drop%20earing.webp&price=800'">
+                <img src="images/earings/tear drop earing.webp" class="img-fluid w-100 h-75" alt="Dove Pearl Bracelet" />
+                <h5 class="text-center mt-4">FLOWER DROP EARRINGS</h5>
+                <p class="text-center price">Rs 800</p>
+            </div>
+            <div class="col-lg-3 product-item" onclick="location.href='earrings1.html?name=ENCRUSTED%20OBLONG%20HOOPS%20%E2%99%A1&image=images/earings/encrusted%20oblong%20hoops.jpg&price=1800'">
+                <img src="images/earings/encrusted oblong hoops.jpg" class="img-fluid w-100 h-75" alt="Zig Zag Multi Bracelet" />
+                <h5 class="text-center mt-4">ENCRUSTED OBLONG HOOPS</h5>
+                <p class="text-center price">Rs 1800</p>
+            </div>
+            <div class="col-lg-3 product-item" onclick="location.href='earrings1.html?name=PEAR%20BOW%20EARRINGS%20%E2%99%A1&image=images/earings/pearl%20bow%20earing.jpg&price=1000'">
+                <img src="images/earings/pearl bow earing.jpg" class="img-fluid w-100 h-75" alt="Dove Pearl Bracelet" />
+                <h5 class="text-center mt-4">PEARL BOW EARRINGS</h5>
+                <p class="text-center price">Rs 1000</p>
+            </div>
+            <div class="col-lg-3 product-item" onclick="location.href='earrings1.html?name=PEARL%20EARRINGS%20%E2%99%A1&image=images/earings/pearl%20earing.jpeg&price=2000'">
+                <img src="images/earings/pearl earing.jpeg" class="img-fluid w-100 h-75" alt="Zig Zag Multi Bracelet" />
+                <h5 class="text-center mt-4">PEARL EARRINGS</h5>
+                <p class="text-center price">Rs 2000</p>
+            </div>
+        </div>
+    </div>
+    
+    <footer style="background-color: rgb(247, 247, 247);border-top: 1px solid black;">
+        <div class="row ">
+            
+          <div class="col-lg-2 mt-3 text-center">
+            <h4 >Shop</h4>
+            <ul class="shop-list">
+                <li>Shop All</li>
+                <li>Necklaces</li>
+                <li>Bracelets</li>
+                <li>Earrings</li>
+                <li>Rings</li>
+                <li>Studs</li>
+            </ul>
+         </div>
+         <div class="col-lg-3 mt-3 text-center">
+            <h4 >Information</h4>
+           <ul class="shop-list">
+              <li>FAQ</li>
+              <li>Customer Care</li>
+              <li>Terms & Conditions</li>
+           </ul>
+         </div>
+         <div class="col-lg-3 mt-3 text-center ">
+          <h4 >Company</h4>
+         <ul class="shop-list ">
+          <i class="bi bi-telephone-fill  "></i> <li>+92-234-763-0432</li> 
+          <i class="bi bi-envelope-fill"></i><li>jewelgems@gmail.com</li>
+          <i class="bi bi-geo-alt-fill  "> </i> <li> Shop no 1, Plot, 37-C Tariq Rd, Block 2 PECHS, Karachi.</li>
+          <i class="bi bi-clock-fill"></i> <li> 9:00AM - 5:00PM</li>
+         </ul>
+         </div>
+         <div class="col-lg-3 fs-3 mt-3 text-center">
+          <h3 class="mx-3 ">♡♡♡</h3>
+          <p><b style="  font-family: Courgette, cursive;">MODERN <br> JEWELRY</b> <br> For the <br> <b style="  font-family: Courgette, cursive;">VINTAGE </b><br> Soul</p>
+         </div>
+       </div>
+        
+      
+    </footer>
+</body>
+</html>
